@@ -1,0 +1,72 @@
+openapi: 3.0.3
+info:
+  title: SmallHQ API
+  version: 1.0.0
+paths:
+  /api/v1/auth/signup:
+    get:
+      summary: Sign up
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+    post:
+      summary: Sign up
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+  /api/v1/auth/sign-in:
+    get:
+      summary: Sign in
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+    post:
+      summary: Sign in
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+  /api/v1/account:
+    get:
+      summary: Get account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+    post:
+      summary: Get account
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+components:
+  schemas:
+    UserResponse:
+      type: object
+      properties:
+        username:
+          type: string
+          example: test
+      required:
+        - username
